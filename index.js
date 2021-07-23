@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
-const fs = require("fs");
+const cors = require("cors");
 const data = require("./assets/csc.json");
 /* const data = require("./assets/data");
  */ const port = process.env.PORT || 3000;
+
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
